@@ -121,7 +121,24 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
-  
+
+  test('can modulus two small numbers', () => {
+    expected = 3;
+    actual = modulus(13,5);
+    expect(actual).toBe(expected);
+  })
+
+  test('can modulus negative numbers', () => {
+    expected = -3;
+    actual = modulus(-13,5);
+    expect(actual).toBe(expected);
+  })
+
+  test('can handle modulus with 0', () => {
+    expected = NaN;
+    actual = modulus(12,0);
+    expect(actual).toBe(expected);
+  })
 
 });
 
