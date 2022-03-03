@@ -11,14 +11,23 @@ const multiply = function(a,b){
 };
 
 const divide = function(a,b){
+    if (b == 0) {
+        return NaN;
+    }
     return a / b; 
 };
 
-const modulus = null;
+const modulus = function(a, b) {
+    return a % b;
+};
 
-const even = null;
+const even = function(a) {
+    return (modulus(a, 2) === 0);
+};
 
-const odd = null;
+const odd = function(a) {
+    return (modulus(a, 2) === 1);
+};
 
 module.exports = { 
     sum, 

@@ -100,9 +100,28 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide two small numbers', () => {
+    expected = 3;
+    actual = divide(6, 2);
+    expect(actual).toBe(expected);
+  })
+
+  test('can divide decimals', () => {
+    expected = 3.3;
+    actual = divide(9.9, 3);
+    expect(actual).toBeCloseTo(expected);
+  })
+
+  test('handle divide by zero', () => {
+    expected = NaN;
+    actual = divide(9, 0);
+    expect(actual).toBe(expected);
+  })
+
 });
 
 describe('modulus', () => {
+  
 
 });
 
