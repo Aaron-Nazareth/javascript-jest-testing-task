@@ -113,7 +113,7 @@ describe('divide', () => {
   })
 
   test('handle divide by zero', () => {
-    expected = NaN;
+    expected = Infinity;
     actual = divide(9, 0);
     expect(actual).toBe(expected);
   })
@@ -135,7 +135,7 @@ describe('modulus', () => {
   })
 
   test('can handle modulus with 0', () => {
-    expected = NaN;
+    expected = Infinity;
     actual = modulus(12,0);
     expect(actual).toBe(expected);
   })
