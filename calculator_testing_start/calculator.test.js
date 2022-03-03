@@ -144,8 +144,49 @@ describe('modulus', () => {
 
 describe('even', () => {
 
+  test('check if positive number is even', () => {
+    expected = true;
+    actual = even(2);
+    expect(actual).toBe(expected);
+  
+  })
+
+  test('check if negative number is even', () => {
+    expected = true;
+    actual = even(-2);
+    expect(actual).toBe(expected);
+  
+  })
+
+  test('check if a decimal number is not even', () => {
+    expected = false;
+    actual = even(2.2);
+    expect(actual).toBe(expected);
+  })  
+  
+
 });
 
 describe('odd', () => {
+
+  test('check if positive number is odd', () => {
+    expected = true;
+    actual = odd(7);
+    expect(actual).toBe(expected);
+  
+  })
+
+  test('check if negative number is odd', () => {
+    expected = true;
+    actual = odd(-5);
+    expect(actual).toBe(expected);
+  
+  })
+
+  test('check if a decimal number is not odd', () => {
+    expected = false;
+    actual = odd(3.6);
+    expect(actual).toBe(expected);
+  })  
 
 });

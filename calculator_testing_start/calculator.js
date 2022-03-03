@@ -26,7 +26,7 @@ const even = function(a) {
 };
 
 const odd = function(a) {
-    return (modulus(a, 2) === 1);
+    return (Math.abs(modulus(a, 2)) === 1);
 };
 
 module.exports = { 
